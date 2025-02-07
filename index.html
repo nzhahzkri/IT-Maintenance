@@ -11,7 +11,12 @@
             padding: 150px;
             background-color: #fcfeff;
         }
-        h2 { font-size: 30px; padding-bottom: 15px }
+
+        h2 {
+            font-size: 30px;
+            padding-bottom: 15px;
+        }
+
         .button {
             display: block;
             width: 90%;
@@ -25,16 +30,20 @@
             border-radius: 5px;
             text-decoration: none;
         }
+
         .button.red {
             background-color: #dc3545;
         }
+
         #passwordForm {
             display: block;
         }
+
         #content {
             display: none;
         }
-  	#password {
+
+        #password {
             width: 50%; /* Adjust the width */
             max-width: 200px;
             padding: 12px; /* Adjust padding for input */
@@ -43,6 +52,7 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+
         #passwordForm button {
             width: 50%; /* Adjust the width */
             max-width: 100px;
@@ -53,11 +63,35 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-		margin-top: 10px;
+            margin-top: 10px;
         }
+
         /* Add hover effect for the button */
         #passwordForm button:hover {
             background-color: #2980b9;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 50px; /* Adjust padding for small screens */
+            }
+
+            h2 {
+                font-size: 24px; /* Reduce font size on small screens */
+            }
+
+            .button {
+                width: 100%; /* Full width on small screens */
+            }
+
+            #password {
+                width: 80%; /* Increase width for the password input */
+            }
+
+            #passwordForm button {
+                width: 80%; /* Increase button width for small screens */
+            }
         }
 
     </style>

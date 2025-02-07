@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technofit IT Maintenance</title>
-       <link rel="icon" href="https://github.com/github/github/raw/main/images/favicons/favicon.ico" type="image/x-icon">
-    </head>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 80px;
+            background-color: #fcfeff;
         }
-	h2 { font-size: 34px;
-		padding-bottom: 20px
-	}
+        h2 { font-size: 34px; padding-bottom: 20px }
         .button {
             display: block;
             width: 80%;
@@ -23,22 +20,73 @@
             padding: 15px;
             font-size: 18px;
             color: white;
-            background-color: #007bff;
+            background-color: #3498db;
             border: none;
             border-radius: 5px;
             text-decoration: none;
-		padding-bottom: 10px;
         }
         .button.red {
             background-color: #dc3545;
-		padding-bottom: 10px;
         }
+        #passwordForm {
+            display: block;
+        }
+        #content {
+            display: none;
+        }
+  	#password {
+            width: 50%; /* Adjust the width */
+            max-width: 200px;
+            padding: 12px; /* Adjust padding for input */
+            font-size: 14px;
+            margin-bottom: 20px; /* Space between the input and submit button */
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #passwordForm button {
+            width: 50%; /* Adjust the width */
+            max-width: 100px;
+            padding: 12px; /* Adjust padding for button */
+            font-size: 16px;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+		margin-top: 10px;
+        }
+        /* Add hover effect for the button */
+        #passwordForm button:hover {
+            background-color: #2980b9;
+        }
+
     </style>
 </head>
 <body>
     <h2>IT Maintenance Service Form</h2>
-    </a>
-    <a href="https://form.jotform.com/technofit/it-maintenance-service-form" class="button green" target="_blank">Maintenance Form</a>
-    <a href="https://technofitmy-my.sharepoint.com/:f:/g/personal/aina_soleha_technofit_com_my/EtiNOnVPS9ZEldyHHs78BrEBvKI96IsSJphcW2Usj10d_w?e=WJfkxA" class="button red" target="_blank">Maintenance Records</a>
+
+    <div id="passwordForm">
+        <input type="password" id="password" />
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="content">
+        <a href="https://form.jotform.com/technofit/it-maintenance-service-form" class="button green" target="_blank">Maintenance Form</a>
+        <a href="https://technofitmy-my.sharepoint.com/:f:/g/personal/aina_soleha_technofit_com_my/EtiNOnVPS9ZEldyHHs78BrEBvKI96IsSJphcW2Usj10d_w?e=WJfkxA" class="button red" target="_blank">Maintenance Records</a>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('password').value;
+            var correctPassword = 'it@3210'; // Set your password here
+            if (enteredPassword === correctPassword) {
+                document.getElementById('passwordForm').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert('Incorrect password');
+            }
+        }
+    </script>
+
 </body>
 </html>
